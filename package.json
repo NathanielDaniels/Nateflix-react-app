@@ -24,8 +24,8 @@
     "webpack": "^5.21.2"
   },
   "scripts": {
-    // "start": "react-scripts start",
-    /*"build": "react-scripts build",*/
+    "start": "react-scripts start",
+    "// build": "react-scripts build",
     "build": "webpack",
     "watch": "webpack -w",
     "test": "react-scripts test",
