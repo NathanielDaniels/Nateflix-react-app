@@ -20,6 +20,6 @@ Jumbotron.Title = ({ children, ...restProps}) => {
 Jumbotron.SubTitle = ({ children, ...restProps}) => {
   return <SubTitle {...restProps}>{children}</SubTitle>
 }
-Jumbotron.Image = ({ children, ...restProps}) => {
-  return <Image {...restProps}>{children}</Image>
+Jumbotron.Image = function JumbotronImage({...restProps}) {
+  return <Image {...restProps} />
 }

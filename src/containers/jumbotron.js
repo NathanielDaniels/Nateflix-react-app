@@ -9,7 +9,7 @@ function jumbotronContainer() {
         <Jumbotron key={item.id} direction={item.direction}>
           <Jumbotron.Title><p>{item.title}</p></Jumbotron.Title>
           <Jumbotron.SubTitle><p>{item.subTitle}</p></Jumbotron.SubTitle>
-          {/* <Jumbotron.Image></Jumbotron.Image> */}
+          <Jumbotron.Image src={item.image} alt={item.alt}/>
         </Jumbotron>
       ))}
     </Jumbotron.Container>
