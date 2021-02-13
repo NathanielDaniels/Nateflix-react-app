@@ -1,19 +1,19 @@
 import styled from 'styled-components'
 
-export const Inner = styled.div`
+const Inner = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const Item = styled.div``;
+const Item = styled.div``;
 
-export const Container = styled.section``;
+const Container = styled.section``;
 
-export const Title = styled.h1`
+const Title = styled.h1`
   font-size: 3rem;
 `;
 
-export const SubTitle = styled.h2`
+const SubTitle = styled.h2`
   font-size: 26px;
   font-weight: normal;
   line-height: normal;
@@ -23,7 +23,9 @@ export const SubTitle = styled.h2`
   }
 `;
 
-export const Image = styled.img`
+const Image = styled.img`
   max-width: 100%;
   height: auto;
 `;
+
+export {Inner, Item, Container, Title, SubTitle, Image}
