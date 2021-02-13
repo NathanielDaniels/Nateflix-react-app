@@ -4,9 +4,10 @@ import Jumbotron from '../components/jumbotron'
 function Home() {
   return (
     <>
-      <h1>Home</h1>
       <Jumbotron.Container>
         <Jumbotron.Title><p>Hello</p></Jumbotron.Title>
+        <Jumbotron.SubTitle><p>Welcome to Jumbotron</p></Jumbotron.SubTitle>
+        {/* <Jumbotron.Image></Jumbotron.Image> */}
       </Jumbotron.Container>
     </>
   )
