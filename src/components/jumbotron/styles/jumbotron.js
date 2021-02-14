@@ -14,9 +14,26 @@ const Inner = styled.div`
   }
 `;
 
-const Item = styled.div``;
+const Pane = styled.div`
+  width: 50%;
 
-const Container = styled.section``;
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 0 45px;
+  }
+`;
+
+const Item = styled.div`
+  display: flex;
+  border-bottom: 8px solid #222;
+  padding: 50px 5%;
+  color: #fff;
+  overflow: hidden;
+`;
+
+const Container = styled.section`
+  background-color: #000;
+`;
 
 const Title = styled.h1`
   font-size: 50px;
@@ -43,4 +60,4 @@ const Image = styled.img`
   height: auto;
 `;
 
-export {Inner, Item, Container, Title, SubTitle, Image}
+export {Inner, Item, Container, Title, SubTitle, Image, Pane}
