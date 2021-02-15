@@ -1,10 +1,26 @@
 import React from 'react'
-import { Container } from './styles/footer'
+import { Container, Row, Column, Link, Title, Break } from './styles/footer'
 
 export default function Footer({ children, ...restProps}) {
   return <Container {...restProps}>{children}</Container>
 }
 
-// Footer.container = ({children, ...restProps}) => {
-//   return <Footer {...restProps}>{children}</Footer>
-// }
+Footer.Row = ({children, ...restProps}) => {
+  return <Row {...restProps}>{children}</Row>
+}
+
+Footer.Column = ({children, ...restProps}) => {
+  return <Column {...restProps}>{children}</Column>
+}
+
+Footer.Link = ({ children, ...restProps }) => {
+    return <Link {...restProps}>{children}</Link>
+}
+
+Footer.Title = ({ children, ...restProps }) => {
+    return <Title {...restProps}>{children}</Title>;
+}
+
+Footer.Break = ({ children, ...restProps }) => {
+    return <Break {...restProps}/>
+}
