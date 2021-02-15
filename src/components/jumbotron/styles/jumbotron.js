@@ -20,6 +20,7 @@ const Pane = styled.div`
   @media (max-width: 1000px) {
     width: 100%;
     padding: 0 45px;
+    text-align: center;
   }
 `;
 
@@ -33,6 +34,12 @@ const Item = styled.div`
 
 const Container = styled.section`
   background-color: #000;
+
+  @media (max-width: 1000px) {
+    ${Item}:last-of-type h2 {
+        margin-bottom: 50px;
+    }
+  }
 `;
 
 const Title = styled.h1`
