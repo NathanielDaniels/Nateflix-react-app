@@ -8,7 +8,7 @@ function App() {
     <Router>
         <Switch>
             <Route exact path="/">
-                <p>I am going to be a cloned Netflix application</p>
+                <p>Nateflix application</p>
             </Route>
             <Route path="/signin">
                 <p>I will be the sign in page</p>

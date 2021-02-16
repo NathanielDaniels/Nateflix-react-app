@@ -29,7 +29,7 @@ export const Row = styled.div`
 
 export const Link = styled.a`
   text-decoration: none;
-  color: #757575;
+  color: lightgray;
   font-size: 13px;
   margin-bottom: 20px;
 `;
