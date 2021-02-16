@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Container, Inner, Title, Header, Body} from '../accordion'
+import {Container, Inner, Title, Header, Body} from './styles/accordion'
 
 export default function Accordion({children, ...restProps}) {
   // const {isOpen, setIsOpen} = useState(false)
