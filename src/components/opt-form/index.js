@@ -1,5 +1,5 @@
 import React from 'react'
-import {name} from './styles/opt-form'
+import {Container} from './styles/opt-form'
 
 export default function optForm({children, ...restProps}) {
   return (
