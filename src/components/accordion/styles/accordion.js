@@ -71,7 +71,7 @@ export const Header = styled.div`
 
 export const Body = styled.body`
   ${'' /* box-sizing: border-box;s */}
-  color: #777;
+  color: #e2e2e2;
   transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
   width: 100%;
   font-size: 26px;
