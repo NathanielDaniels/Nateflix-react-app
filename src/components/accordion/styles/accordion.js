@@ -7,7 +7,7 @@ export const Container = styled.section`
 `;
 
 export const Frame = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   max-width: 1200px;
 `;                                                      
 
@@ -42,7 +42,7 @@ export const Title = styled.h1`
 `;
 
 export const Header = styled.div`
-  box-sizing: border-box;
+  ${'' /* box-sizing: border-box; */}
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -70,7 +70,7 @@ export const Header = styled.div`
 `;
 
 export const Body = styled.body`
-  box-sizing: border-box;
+  ${'' /* box-sizing: border-box;s */}
   color: #777;
   transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
   width: 100%;

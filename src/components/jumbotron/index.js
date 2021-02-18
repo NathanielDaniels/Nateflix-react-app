@@ -13,6 +13,10 @@ Jumbotron.Container = ({ children, ...restProps}) => {
   return <Container {...restProps}>{children}</Container>
 }
 
+Jumbotron.Pane = ({children, ...restProps}) => {
+  return <Pane {...restProps}>{children}</Pane>
+}
+
 Jumbotron.Title = ({ children, ...restProps}) => {
   return <Title {...restProps}>{children}</Title>
 }
@@ -23,8 +27,4 @@ Jumbotron.SubTitle = ({ children, ...restProps}) => {
 
 Jumbotron.Image = ({...restProps}) => {
   return <Image {...restProps} />
-}
-
-Jumbotron.Pane = ({children, ...restProps}) => {
-  return <Pane {...restProps}>{children}</Pane>
 }
