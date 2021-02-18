@@ -3,10 +3,11 @@ import styled from 'styled-components'
 export const Container = styled.section`
   display: flex;
   border-bottom: 8px solid #222;
+  max-width: 100%;
 `;
 
 export const Frame = styled.div`
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
   max-width: 1200px;
 `;                                                      
 
@@ -41,6 +42,7 @@ export const Title = styled.h1`
 `;
 
 export const Header = styled.div`
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -56,6 +58,10 @@ export const Header = styled.div`
   img {
     filter: brightness(0) invert(1);
     width: 24px;
+
+    @media (max-width: 600px) {
+      width: 16px;
+    }
   }
 
   @media (max-width: 600px) {
@@ -64,10 +70,10 @@ export const Header = styled.div`
 `;
 
 export const Body = styled.body`
+  box-sizing: border-box;
   color: #777;
   transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
   width: 100%;
-  max-width: 1200px;
   font-size: 26px;
   font-weight: normal;
   line-height: normal;
