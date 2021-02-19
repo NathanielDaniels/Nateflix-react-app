@@ -19,7 +19,7 @@ export const Input = styled.input`
   width: 100%;
   border: 0;
   padding: 10px;
-  height: 70px;
+  height: 60px;
 `;
 
 export const Button = styled.button`
@@ -28,9 +28,9 @@ export const Button = styled.button`
   align-items: center;
   background: #e50914;
   color: white;
-  text-transform: uppercase;
+  ${'' /* text-transform: uppercase; */}
   padding: 0 32px;
-  height: 70px;
+  height: 60px;
   cursor: pointer;
   font-size: 26px;
   border: 0;
@@ -61,7 +61,7 @@ export const Text = styled.p`
   font-size: 19px;
   color: #fff;
   text-align: center;
-  margin-top: 10px;
+  margin-bottom: 10px;
 
   @media (max-width: 600px) {
     font-size: 16px;
