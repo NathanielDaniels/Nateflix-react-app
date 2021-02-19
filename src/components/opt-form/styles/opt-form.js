@@ -27,8 +27,7 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   background: #e50914;
-  color: white;
-  ${'' /* text-transform: uppercase; */}
+  color: white; 2
   padding: 0 32px;
   height: 60px;
   cursor: pointer;
