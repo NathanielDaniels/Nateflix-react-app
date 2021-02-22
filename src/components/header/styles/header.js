@@ -58,7 +58,6 @@ export const Logo = styled.p`
   text-shadow: 2px 2px 2px black;
   font-weight: 600;
   color: #E50914;
-  ${'' /* letter-spacing: .5px; */}
   text-transform: uppercase;
   font-size: 2.2rem;
   transform: scaleY(1.6);

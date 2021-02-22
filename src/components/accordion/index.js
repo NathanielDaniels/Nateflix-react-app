@@ -45,6 +45,5 @@ Accordion.Header = function AccordionHeader({children, ...restProps}) {
 
 Accordion.Body = function AccordionBody({children, ...restProps}) {
   const {toggleShow} = useContext(ToggleContext)
-  console.log({toggleShow})
   return toggleShow ? <Body {...restProps}>{children}</Body> : null
 }
