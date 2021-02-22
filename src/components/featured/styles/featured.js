@@ -6,7 +6,6 @@ export const Container = styled.div`
   border-bottom: 8px solid #222;
   text-align: center;
   padding: 165px 45px;
-  ${'' /* padding: 145px 45px 165px; */}
 `;
 
 export const Title = styled.h3`

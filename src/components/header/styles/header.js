@@ -11,21 +11,21 @@ export const Background = styled.section`
 `;
 
 export const Container = styled.div`
+  display: flex;
+  margin: 0 56px;
+  ${'' /* height: 64px; */}
+  height: 80px;
+  padding: 18px 0;
+  justify-content: space-between;
+  align-items: center;  
+  
+  a {
     display: flex;
-    margin: 0 56px;
-    ${'' /* height: 64px; */}
-    height: 80px;
-    padding: 18px 0;
-    justify-content: space-between;
-    align-items: center;  
-    
-    a {
-        display: flex;
-    }
+  }
 
-    @media (max-width: 1000px) {
-        margin: 0 30px;
-    }
+  @media (max-width: 1000px) {
+    margin: 0 30px;
+  }
 `;
 
 export const Link = styled.p`
@@ -37,6 +37,7 @@ export const Link = styled.p`
   &:hover {
     font-weight: bold;
   }
+
   &:last-of-type {
     margin-right: 0;
   }
@@ -63,23 +64,23 @@ export const Logo = styled.p`
 `;
 
 export const ButtonLink = styled(ReachRouterLink)`
-    font-weight: 600;
-    color: #fff;
-    display: block;
-    background-color: #e50914;
-    width: 84px;
-    height: fit-content;
-    border: 0;
-    font-size: 15px;
-    border-radius: 3px;
-    padding: 8px 17px;
-    cursor: pointer;
-    text-decoration: none;
-    box-sizing: border-box;
-    
-    &:hover {
-        background: #f40612;
-    }
+  font-weight: 600;
+  color: #fff;
+  display: block;
+  background-color: #e50914;
+  width: 84px;
+  height: fit-content;
+  border: 0;
+  font-size: 15px;
+  border-radius: 3px;
+  padding: 8px 17px;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  letter-spacing: .1px;
+  &:hover {
+    background: #f40612;
+  }
 `;
 
 
