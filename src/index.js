@@ -5,17 +5,17 @@ import './index.css';
 import App from './App';
 import { FirebaseContext } from './context/firebase'
 
-const config = {
-  apiKey: '',
-  authDomain: '',
-  databaseURL: '',
-  projectId: '',
-  storageBucket: '',
-  messagingSenderId: '',
-  appId: '',
-}
+// const config = {
+//   apiKey: '',
+//   authDomain: '',
+//   databaseURL: '',
+//   projectId: '',
+//   storageBucket: '',
+//   messagingSenderId: '',
+//   appId: '',
+// }
 
-const firebase = window.firebase.initializeApp(config)
+// const firebase = window.firebase.initializeApp(config)
 
 ReactDOM.render(
   <React.StrictMode>
