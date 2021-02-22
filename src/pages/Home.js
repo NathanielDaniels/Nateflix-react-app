@@ -10,6 +10,8 @@ function Home() {
     <>
       <HeaderContainer>
         <Featured>
+          <Featured.Title>Unlimited films, TV programmes and more.</Featured.Title>
+          <Featured.SubTitle>Watch anywhere. Cancel at any time.</Featured.SubTitle>
           <OptForm>
             <OptForm.Input placeholder="Email Address" />
             <OptForm.Button>Try it now</OptForm.Button>
@@ -19,6 +21,7 @@ function Home() {
           </OptForm>
         </Featured>
       </HeaderContainer>
+      
       <JumbotronContainer />
       <FaqsContainer />
       <FooterContainer />

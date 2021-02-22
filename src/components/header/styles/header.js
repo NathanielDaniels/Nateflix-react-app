@@ -5,7 +5,6 @@ export const Background = styled.section`
   display: flex;
   flex-direction: column;
   background: url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover no-repeat;
-  padding-bottom: 10px;
   @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
   }
@@ -64,7 +63,7 @@ export const Logo = styled.p`
 `;
 
 export const ButtonLink = styled(ReachRouterLink)`
-
+    font-weight: 600;
     color: #fff;
     display: block;
     background-color: #e50914;

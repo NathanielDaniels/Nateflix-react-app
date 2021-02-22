@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Title, Subtitle} from './styles/featured'
+import {Container, Title, SubTitle} from './styles/featured'
 
 export default function Featured({children, ...restProps}) {
   return (
@@ -11,6 +11,6 @@ Featured.Title = function featuredTitle({children, ...restProps}) {
   return <Title {...restProps}>{children}</Title>
 }
 
-Featured.Subtitle = function featuredSubtitle({children, ...restProps}) {
-  return <Subtitle {...restProps}>{children}</Subtitle>
+Featured.SubTitle = function featuredSubTitle({children, ...restProps}) {
+  return <SubTitle {...restProps}>{children}</SubTitle>
 }
