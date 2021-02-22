@@ -59,7 +59,7 @@ export const Logo = styled.p`
   font-weight: 600;
   color: #E50914;
   text-transform: uppercase;
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   transform: scaleY(1.6);
 `;
 
