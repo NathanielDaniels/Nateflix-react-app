@@ -56,9 +56,10 @@ export const Button = styled.button`
   }
 `;
 
-export const Break = styled.br`
+export const Break = styled.div`
     flex-basis: 100%;
     height: 0;
+    margin-top: 15px;
 `;
 
 export const Text = styled.p`
