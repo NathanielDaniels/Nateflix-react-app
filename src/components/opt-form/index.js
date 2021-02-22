@@ -1,6 +1,5 @@
 import React from 'react'
-// import { OptForm } from '..'
-import { Container, Input, Button, Text} from './styles/opt-form'
+import { Container, Input, Button, Text, Break} from './styles/opt-form'
 
 export default function OptForm({children, ...restProps}) {
   return (
@@ -17,6 +16,12 @@ OptForm.Button = function OptFormButton({children, ...restProps}) {
     <Button {...restProps}>
       {children} <img src="../images/icons/chevron-right.png" alt="Try Now"/>
     </Button>
+  )
+}
+
+OptForm.Break = function OptFormBreak({...restProps}) {
+  return (
+    <Break {...restProps}/>
   )
 }
 
