@@ -6,7 +6,6 @@ export function HeaderContainer({ children }) {
   return (
       <Header>
         <Header.Frame>
-          {/* <Header.Logo to={ROUTES.HOME} src="../images/misc/logo.svg" alt="Nateflix"/> */}
           <Header.Logo to={ROUTES.HOME} alt="Nateflix"/>
           <Header.ButtonLink to={ROUTES.SIGN_IN}>Sign In</Header.ButtonLink>
         </Header.Frame>
