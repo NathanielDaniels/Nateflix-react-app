@@ -1,7 +1,7 @@
-import React from 'react'
-import {Container, Title, SubTitle} from './styles/featured'
+import React from 'react';
+import {Container, Title, SubTitle} from './styles/featured';
 
-export default function Featured({children, ...restProps}) {
+export default function Featured({ children, ...restProps }) {
   return (
     <Container {...restProps}>{children}</Container>
   )

@@ -9,7 +9,7 @@ export const Container = styled.section`
 export const Frame = styled.div`
   margin-bottom: 10px;
   max-width: 1200px;
-`;                                                      
+`;
 
 export const Inner = styled.div`
   display: flex;
