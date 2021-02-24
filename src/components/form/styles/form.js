@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link as ReachRouterLink } from 'reach-router-dom';
+import { Link as ReachRouterLink } from 'react-router-dom';
 
 export const Container = styled.section``;
 export const Base = styled.form``;
