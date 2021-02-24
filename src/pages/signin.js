@@ -11,9 +11,9 @@ export default function Signin() {
     event.preventDefault();
     console.log("Email: ", emailAddress)
     console.log("Password: ", userPassword)
+    
   }
   
-
   return (
     <HeaderContainer>
       <Form>

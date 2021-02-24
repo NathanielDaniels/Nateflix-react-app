@@ -34,4 +34,9 @@ export const Input = styled.input`
 
 export const Error = styled.div``;
 
-export const Submit = styled.button``;
+export const Submit = styled.button`
+  width: 50%;
+  padding: 5px;
+  margin: 10px auto 0;
+  cursor: pointer;
+`;
