@@ -13,7 +13,6 @@ Header.Frame = function HeaderFrame({children, ...restProps}) {
 Header.Logo = function HeaderLogo({to, ...restProps}) {
   return (
     <ReachRouterLink to={to}>
-      {/* <Logo {...restProps}/> */}
       <Logo {...restProps}>Nateflix</Logo>
     </ReachRouterLink>
   )

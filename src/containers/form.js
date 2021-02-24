@@ -1,10 +1,10 @@
 import React from 'react';
-import { form } from '../components'
+import { Form } from '../components'
 
 export function FormContainer() {
   return (
     <Form>
-      
+
     </Form>
   )
 }

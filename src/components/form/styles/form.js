@@ -1,13 +1,12 @@
 import styled from 'styled-components';
-import { Link as ReachRouterLink} from 'reach-router-dom';
-// Container, Base, Title, Text, TextSmall, Link, Input, Error, Submit
+import { Link as ReachRouterLink } from 'reach-router-dom';
 
-export default Container = styled.section``;
-export default Base = styled.form``;
-export default Title = styled.h2``;
-export default Text = styled.p``;
-export default TextSmall = styled.h5``;
-export default Link = styled(ReachRouterLink)``;
-export default Input = styled.input``;
-export default Error = styled.p``;
-export default Submit = styled.button``;
+export const Container = styled.section``;
+export const Base = styled.form``;
+export const Title = styled.h2``;
+export const Text = styled.p``;
+export const TextSmall = styled.h4``;
+export const Link = styled(ReachRouterLink)``;
+export const Input = styled.input``;
+export const Error = styled.div``;
+export const Submit = styled.button``;
