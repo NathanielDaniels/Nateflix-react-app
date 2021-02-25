@@ -37,12 +37,7 @@ export default function Signin() {
               type="password" 
               placeholder="Password"
               value={userPassword}
-              onChange={({ target }) => {
-                setUserPassword(target.value)
-                if (userPassword.split('').length = 0) {
-                  console.log('not valid password')
-                }
-              }}
+              onChange={({ target }) => setUserPassword(target.value)}
             />
             <Form.Submit type="submit" disabled={isInvalid}>Sign In</Form.Submit>
 
