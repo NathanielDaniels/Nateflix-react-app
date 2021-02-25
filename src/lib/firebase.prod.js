@@ -1,12 +1,13 @@
 import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import apiKey from '../secret'
 
 //we need to seed the database
 
 // need a config
 const config = {
-  apiKey: "AIzaSyADx7H-z6YjmnWwN-cZymwbwjv6AT9SLSQ",
+  apiKey,
   authDomain: "netflix-clone-639dd.firebaseapp.com",
   databaseURL: "https://netflix-clone-639dd.firebaseio.com",
   projectId: "netflix-clone-639dd",
