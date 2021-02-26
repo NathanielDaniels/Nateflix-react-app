@@ -10,7 +10,6 @@ const config = {
   apiKey,
   authDomain: "netflix-clone-639dd.firebaseapp.com",
   databaseURL: "https://netflix-clone-639dd.firebaseio.com",
-  projectId: "netflix-clone-639dd",
   storageBucket: "netflix-clone-639dd.appspot.com",
   messagingSenderId: "350534320019",
   appId: "1:350534320019:web:72808bf152cd772fb9f266",
