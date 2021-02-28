@@ -14,7 +14,6 @@ export const Background = styled.section`
 export const Container = styled.div`
   display: flex;
   margin: 0 56px;
-  ${'' /* height: 64px; */}
   height: 80px;
   padding: 18px 0;
   justify-content: space-between;
@@ -44,17 +43,6 @@ export const Link = styled.p`
   }
 `;
 
-// export const Logo = styled.img`
-//     height: 32px;
-//     width: 108px;
-//     margin-right: 40px;
-    
-//     @media (min-width: 1449px) {
-//       height: 45px;
-//       width: 167px;
-//     }
-// `;
-
 export const Logo = styled.p`
   text-shadow: 2px 2px 2px black;
   font-weight: 600;
@@ -83,10 +71,3 @@ export const ButtonLink = styled(ReachRouterLink)`
     background: #f40612;
   }
 `;
-
-
-// export const Menu = styled.ul`
-//   text-decoration: none;
-//   color: #fff;
-// `;
-// export const Item = styled.li``;

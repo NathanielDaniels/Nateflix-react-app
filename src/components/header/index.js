@@ -21,10 +21,3 @@ Header.Logo = function HeaderLogo({to, ...restProps}) {
 Header.ButtonLink = function HeaderButtonLink({children, ...restProps}) {
   return <ButtonLink {...restProps}>{children}</ButtonLink>
 }
-// Header.Menu = function HeaderMenu({children, ...restProps}) {
-//   <Menu {...restProps}>{children}</Menu>
-// }
-
-// Header.Item = function HeaderItem({children, ...restProps}) {
-//   <Item {...restProps}>{children}</Item>
-// }
