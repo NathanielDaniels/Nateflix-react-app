@@ -1,24 +1,24 @@
-import Firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
-import apiKey from '../secret'
+// import Firebase from 'firebase/app';
+// import 'firebase/firestore';
+// import 'firebase/auth';
+// import apiKey from '../secret'
 
 //we need to seed the database
 
 // need a config
-const config = {
-  apiKey,
-  authDomain: "netflix-clone-639dd.firebaseapp.com",
-  databaseURL: "https://netflix-clone-639dd.firebaseio.com",
-  storageBucket: "netflix-clone-639dd.appspot.com",
-  messagingSenderId: "350534320019",
-  appId: "1:350534320019:web:72808bf152cd772fb9f266",
-  measurementId: "G-QPRM97YMQX"
-};
+// const config = {
+//   apiKey,
+//   authDomain: "netflix-clone-639dd.firebaseapp.com",
+//   databaseURL: "https://netflix-clone-639dd.firebaseio.com",
+//   storageBucket: "netflix-clone-639dd.appspot.com",
+//   messagingSenderId: "350534320019",
+//   appId: "1:350534320019:web:72808bf152cd772fb9f266",
+//   measurementId: "G-QPRM97YMQX"
+// };
 
-const firebase = Firebase.initializeApp(config);
+// const firebase = Firebase.initializeApp(config);
 
-export { firebase };
+// export { firebase };
 
 //! Initialize Firebase
   // firebase.initializeApp(firebaseConfig);
