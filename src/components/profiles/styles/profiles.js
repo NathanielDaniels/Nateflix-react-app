@@ -1,8 +1,9 @@
-import Styled from 'styled-components'
+import styled from 'styled-components'
 
-export const Profiles = styled.section``;
+export const Container = styled.section``;
 export const Title = styled.h2``;
-export const List = styled.li``;
-export const User = styled.div``;
+export const List = styled.ul``;
+export const Name = styled.p``;
 export const Picture = styled.img``;
-export const photoURL = styled.a``;
+export const Item = styled.li``;
+
