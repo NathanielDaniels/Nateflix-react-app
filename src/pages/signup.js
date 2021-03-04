@@ -19,10 +19,6 @@ export default function Signup() {
   const handleSignup = event => {
     event.preventDefault();
 
-    // console.log("Name: ", firstName)
-    // console.log("Email: ", emailAddress)
-    // console.log("Password: ", userPassword)
-
     firebase
       .auth()
       .createUserWithEmailAndPassword(emailAddress, userPassword)
@@ -49,7 +45,6 @@ export default function Signup() {
             {error && <Form.Error>{error}</Form.Error>}
 
             <Form.Base onSubmit={handleSignup} method="POST">
-              {/* <Form.Text>Email</Form.Text> */}
               <Form.Input 
                 type="text" 
                 placeholder="First Name"
@@ -64,7 +59,6 @@ export default function Signup() {
                 onChange={({ target }) => setEmailAddress(target.value)}
                 required
               />
-              {/* <Form.Text>Password</Form.Text> */}
               <Form.Input 
                 type="password" 
                 autoComplete="off"

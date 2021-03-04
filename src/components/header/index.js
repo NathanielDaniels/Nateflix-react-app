@@ -12,7 +12,8 @@ import {
   Feature, 
   PlayButton, 
   Search,
-  SearchIcon
+  SearchIcon,
+  SearchInput
 } from './styles/header'
 
 export default function Header({bg = true, children, ...restProps}) {
@@ -42,7 +43,7 @@ Header.Group = function HeaderGroup({children, ...restProps}) {
 Header.Logo = function HeaderLogo({to, ...restProps}) {
   return (
     <ReachRouterLink to={to}>
-      <Logo {...restProps}>Nateflix</Logo>;
+      <Logo {...restProps}>Nateflix</Logo>
     </ReachRouterLink>
   )
 };
@@ -57,6 +58,12 @@ Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps 
       <SearchIcon onClick={ () => setSearchActive(!searchActive) }>
         <img src="./images/icons/search.png" alt=""/>
       </SearchIcon>
+       <SearchInput
+          value={searchTerm}
+          onChange={({ target }) => setSearchTerm(target.value)}
+          placeholder="Search files and series"
+          active={searchActive}
+        />
     </Search>
   );
 }

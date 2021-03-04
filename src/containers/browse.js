@@ -4,16 +4,12 @@ import * as ROUTES from '../constants/routes'
 import { FirebaseContext } from '../context/firebase'
 import { SelectProfileContainer } from './profiles'
 import { FooterContainer } from './footer'
-// import { HeaderContainer } from './header'
-
 
 export function BrowseContainer() {
   const [category, setCategory] = useState('series');
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
-
-  // console.log(category)
 
   const { firstbase } = useContext(FirebaseContext)
 
