@@ -1,6 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link as ReachRouterLink } from 'react-router-dom'
-import { Group, Background, Container, Logo, TextLink, Link, ButtonLink } from './styles/header'
+import { 
+  Group, 
+  Background, 
+  Container, 
+  Logo, 
+  Link, 
+  Text, 
+  ButtonLink, 
+  FeatureCallOut, 
+  Feature, 
+  PlayButton, 
+  Search,
+  SearchIcon
+} from './styles/header'
 
 export default function Header({bg = true, children, ...restProps}) {
   return bg ? <Background {...restProps}>{children}</Background> : children;
@@ -9,6 +22,18 @@ export default function Header({bg = true, children, ...restProps}) {
 Header.Frame = function HeaderFrame({children, ...restProps}) {
   return <Container {...restProps}>{children}</Container>;
 };
+
+Header.Feature = function HeaderFeature({ children, ...restProps }) {
+    return <Feature>{children}</Feature>
+}
+
+Header.FeatureCallOut = function HeaderFeatureCallOut({children, ...restProps}) {
+  return <FeatureCallOut {...restProps}>{children}</FeatureCallOut>;
+};
+
+Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
+    return <PlayButton {...restProps}>{children}</PlayButton>
+}
 
 Header.Group = function HeaderGroup({children, ...restProps}) {
   return <Group {...restProps}>{children}</Group>;
@@ -22,9 +47,19 @@ Header.Logo = function HeaderLogo({to, ...restProps}) {
   )
 };
 
-Header.TextLink = function HeaderTextLink({children, ...restProps}) {
-  return <TextLink {...restProps}>{children}</TextLink>;
-};
+Header.Text = function HeaderText({ children, ...restProps }) {
+  return <Text {...restProps}>{children}</Text>;
+}
+Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps }) {
+  const [searchActive, setSearchActive] = useState(false)
+  return (
+    <Search {...restProps}>
+      <SearchIcon onClick={ () => setSearchActive(!searchActive) }>
+        <img src="./images/icons/search.png" alt=""/>
+      </SearchIcon>
+    </Search>
+  );
+}
 
 Header.Link = function HeaderLink({children, ...restProps}) {
   return <Link {...restProps}>{children}</Link>;
