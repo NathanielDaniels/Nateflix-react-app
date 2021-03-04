@@ -5,7 +5,6 @@ export const Background = styled.section`
   display: flex;
   flex-direction: column;
   background: url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover no-repeat;
-  
   @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
   }
@@ -28,6 +27,13 @@ export const Container = styled.div`
   }
 `;
 
+export const Group = styled.div`
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+`;
+
 export const Link = styled.p`
   color: #fff;
   margin-right: 30px;
@@ -41,6 +47,10 @@ export const Link = styled.p`
   &:last-of-type {
     margin-right: 0;
   }
+`;
+
+export const TextLink = styled.div`
+  margin: 0 15px;
 `;
 
 export const Logo = styled.p`

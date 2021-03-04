@@ -19,9 +19,9 @@ export default function Signup() {
   const handleSignup = event => {
     event.preventDefault();
 
-    console.log("Name: ", firstName)
-    console.log("Email: ", emailAddress)
-    console.log("Password: ", userPassword)
+    // console.log("Name: ", firstName)
+    // console.log("Email: ", emailAddress)
+    // console.log("Password: ", userPassword)
 
     firebase
       .auth()

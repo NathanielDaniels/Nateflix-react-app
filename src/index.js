@@ -4,19 +4,20 @@ import { GlobalStyles } from './global-styles'
 import './index.css';
 import App from './App';
 import { FirebaseContext } from './context/firebase'
+import Keys from './stash'
 
 const config = {
-  apiKey: 'AIzaSyDAU60M2FDHNsYt9uGMpRezw3FGVIX6Jrs',
-  authDomain: 'netflix-c8ae9.firebaseapp.com',
-  databaseURL: 'https://netflix-c8ae9.firebaseio.com',
-  projectId: 'netflix-c8ae9',
-  storageBucket: 'netflix-c8ae9.appspot.com',
-  messagingSenderId: '590575805931',
-  appId: '1:590575805931:web:f809092b6cd55306fa25ae',
+  apiKey: Keys().apiKey,
+  projectId: Keys().projectId,
+  authDomain: "netflix-clone-639dd.firebaseapp.com",
+  databaseURL: "https://netflix-clone-639dd.firebaseio.com",
+  storageBucket: "netflix-clone-639dd.appspot.com",
+  messagingSenderId: "350534320019",
+  appId: "1:350534320019:web:72808bf152cd772fb9f266",
+  measurementId: "G-QPRM97YMQX"
 };
 
 const firebase = window.firebase.initializeApp(config)
-
 
 ReactDOM.render(
   <React.StrictMode>

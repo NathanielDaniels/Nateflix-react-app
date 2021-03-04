@@ -1,19 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom'
+import { FirebaseContext } from '../context/firebase';
 import { Form } from '../components';
 import { HeaderContainer } from '../containers/header';
 import { FooterContainer } from '../containers/footer';
+import * as ROUTES from '../constants/routes'
 
 export default function Signin() {
-  const [error, setError] = useState('');
+  const history = useHistory();
+  const { firebase } = useContext(FirebaseContext)
   const [emailAddress, setEmailAddress] = useState('');
   const [userPassword, setUserPassword] = useState('');
+  const [error, setError] = useState('');
 
   const isInvalid = userPassword === '' || emailAddress === '';
 
   const handleSignin = event => {
     event.preventDefault();
-    console.log("Email: ", emailAddress)
-    console.log("Password: ", userPassword)
+    // console.log("Email: ", emailAddress)
+    // console.log("Password: ", userPassword)
+
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(emailAddress, userPassword)
+      .then(() => {
+          setEmailAddress('');
+          setUserPassword('');
+          setError('');
+          history.push(ROUTES.BROWSE);
+      })
+      .catch((error) => setError(error.message));
   }
   
   return (
