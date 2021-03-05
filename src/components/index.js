@@ -6,3 +6,4 @@ export { default as Accordion } from './accordion';
 export { default as Featured } from './featured';
 export { default as Form } from './form';
 export { default as Profiles } from './profiles';
+export { default as Loading } from './loading';
