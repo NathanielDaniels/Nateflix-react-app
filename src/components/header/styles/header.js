@@ -123,8 +123,9 @@ export const Text = styled.p`
   margin-top: 10px;
   font-size: 22px;
   line-height: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
-  background: rgba(0,0,0,.4);
+  ${'' /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45); */}
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background: rgba(0,0,0,.2);
   border-radius: 10px;
   padding: 10px 0;
 `;
