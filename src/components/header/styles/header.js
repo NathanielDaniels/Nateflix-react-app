@@ -193,16 +193,13 @@ export const Dropdown = styled.div`
         margin-bottom: 0;
     }
     
-    ${'' /* ${Link}, ${Picture} {
-        cursor: default;
-    } */}
     ${Picture} {
       cursor: default;
     }
   }
   
   button {
-    margin-right: 10px;
+    height: 25px;
   }
   
   p {

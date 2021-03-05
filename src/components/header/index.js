@@ -1,17 +1,17 @@
 import React, {useState} from 'react'
 import { Link as ReachRouterLink } from 'react-router-dom'
 import { 
-  Group, 
   Background, 
   Container, 
-  Logo, 
-  Link, 
-  Text, 
-  ButtonLink, 
-  FeatureCallOut, 
   Feature, 
+  FeatureCallOut, 
   PlayButton, 
+  Group, 
+  Logo, 
+  Text, 
   Search,
+  Link, 
+  ButtonLink, 
   SearchIcon,
   SearchInput,
   Profile,
