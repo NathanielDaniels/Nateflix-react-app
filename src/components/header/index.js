@@ -13,7 +13,10 @@ import {
   PlayButton, 
   Search,
   SearchIcon,
-  SearchInput
+  SearchInput,
+  Profile,
+  Picture,
+  Dropdown,
 } from './styles/header'
 
 export default function Header({bg = true, children, ...restProps}) {
@@ -74,4 +77,20 @@ Header.Link = function HeaderLink({children, ...restProps}) {
 
 Header.ButtonLink = function HeaderButtonLink({children, ...restProps}) {
   return <ButtonLink {...restProps}>{children}</ButtonLink>;
+};
+
+Header.Profile = function HeaderProfile({children, ...restProps}) {
+  return (
+    <Profile {...restProps}>
+      {children}
+    </Profile>
+  )
+};
+
+Header.Picture = function HeaderPicture({src,...restProps}) {
+  return <Picture src={`./images/users/${src}.png`} {...restProps} />;
+};
+
+Header.Dropdown = function HeaderDropdown({children, ...restProps}) {
+  return <Dropdown {...restProps}>{children}</Dropdown>;
 };
