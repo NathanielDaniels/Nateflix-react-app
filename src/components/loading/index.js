@@ -6,8 +6,6 @@ export default function Loading({src, ...restProps}) {
     <Spinner {...restProps}>
       <LockBody />
       <Picture src={`./images/users/${src}.png`} />
-      {/* <Picture src={`./images/misc/loading.gif`} /> */}
-      {/* <Picture src={`./images/misc/spinner.png`} /> */}
     </Spinner>
   )
 }
