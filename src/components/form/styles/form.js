@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link as ReachRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink } from 'react-router-dom';
 
 export const Container = styled.section`
   display: flex;
@@ -44,7 +44,7 @@ export const TextSmall = styled.h4`
   bottom: 20px;
 `;
 
-export const Link = styled(ReachRouterLink)`
+export const Link = styled(ReactRouterLink)`
   color: #fff;
   text-decoration: none;
   

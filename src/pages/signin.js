@@ -17,8 +17,6 @@ export default function Signin() {
 
   const handleSignin = event => {
     event.preventDefault();
-    // console.log("Email: ", emailAddress)
-    // console.log("Password: ", userPassword)
 
     firebase
       .auth()
@@ -40,7 +38,6 @@ export default function Signin() {
           {error && <Form.Error>{error}</Form.Error>}
 
           <Form.Base onSubmit={handleSignin} method="POST">
-            {/* <Form.Text>Email</Form.Text> */}
             <Form.Input 
               type="email" 
               placeholder="Email"
@@ -48,7 +45,6 @@ export default function Signin() {
               onChange={({ target }) => setEmailAddress(target.value)}
               required
             />
-            {/* <Form.Text>Password</Form.Text> */}
             <Form.Input 
               type="password" 
               placeholder="Password"

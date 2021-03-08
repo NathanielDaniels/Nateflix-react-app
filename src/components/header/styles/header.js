@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import { Link as ReachRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink } from 'react-router-dom';
 
 export const Background = styled.section`
   display: flex;
@@ -98,7 +98,7 @@ export const Logo = styled.p`
   transform: scaleY(1.6);
 `;
 
-export const ButtonLink = styled(ReachRouterLink)`
+export const ButtonLink = styled(ReactRouterLink)`
   font-weight: 600;
   color: #fff;
   display: block;

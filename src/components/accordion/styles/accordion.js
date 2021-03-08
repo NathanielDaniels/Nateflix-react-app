@@ -22,6 +22,7 @@ export const Inner = styled.div`
 export const Item = styled.div`
   color: #fff;
   margin-bottom: 10px;
+  ${'' /* max-width: 670px; */}
 
   &:first-of-type {
     margin-top: 3em;
@@ -79,9 +80,10 @@ export const Body = styled.div`
   padding: 0.8em 1.2em 0.8em 1.2em;
   user-select: none;
   align-items: center;
+  white-space: pre-wrap;
 
   @media (max-width: 600px) {
-      font-size: 16px;
-      line-height: 22px;
+    font-size: 16px;
+    line-height: 22px;
   }
 `;
