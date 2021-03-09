@@ -7,8 +7,6 @@ import { useAuthListener } from './hooks'
 
 function App() {
   const { user } = useAuthListener();
-  // const user = { name: "Billy" };
-  // console.log("user:", user)
 
   return (
     <Router>
