@@ -20,6 +20,7 @@ const config = {
   appId: "1:350534320019:web:72808bf152cd772fb9f266",
   measurementId: "G-QPRM97YMQX"
 };
+
 const firebase = Firebase.initializeApp(config);
 
 ReactDOM.render(

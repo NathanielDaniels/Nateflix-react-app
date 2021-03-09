@@ -166,6 +166,8 @@ export const SearchInput = styled.input`
 export const Picture = styled.button`
   background: url(${({src}) => src});
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   border: 0;
   width: 32px;
   height: 32px;
