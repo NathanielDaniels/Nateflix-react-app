@@ -9,7 +9,7 @@ function App() {
   const { user } = useAuthListener;
   console.log("user:", user)
   // const user = { name: "Billy" };
-  
+
   return (
     <Router>
         <Switch>
@@ -42,18 +42,6 @@ function App() {
               >
               <Home/>
             </ProtectedRoute>
-            {/* <Route exact path={ROUTES.SIGN_IN}>
-              <Signin/>
-            </Route> */}
-            {/* <Route path={ROUTES.SIGN_UP}>
-                <Signup/>
-            </Route> */}
-            {/* <Route path={ROUTES.BROWSE}>
-                <Browse/>
-            </Route> */}
-            {/* <Route path={ROUTES.HOME}>
-                <Home/>
-            </Route> */}
         </Switch>
     </Router>
   );
