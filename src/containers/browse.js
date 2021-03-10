@@ -4,27 +4,30 @@ import * as ROUTES from '../constants/routes'
 import { FirebaseContext } from '../context/firebase'
 import { SelectProfileContainer } from './profiles'
 import { FooterContainer } from './footer'
-import { useAuthListener, useContent } from '../hooks'
+import { useAuthListener } from '../hooks'
 
 export function BrowseContainer() {
   const [category, setCategory] = useState('series');
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
-  const { user } = useAuthListener();
-  const { series } = useContent('series');
-  const { films } = useContent('films');
   const { firebase } = useContext(FirebaseContext);
+  const { user } = useAuthListener();
+  // const { user } = firebase.auth().currentUser || {};
 
-  console.log(films)
-
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   }, 3000)
+  //   return () => clearTimeout
+  // }, [user]) 
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
     }, 3000)
     return () => clearTimeout
-  }, [user]) 
+  }, [profile.displayName]) 
 
   return profile.displayName ? (
     <>

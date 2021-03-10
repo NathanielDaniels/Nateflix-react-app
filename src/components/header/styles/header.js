@@ -179,7 +179,8 @@ export const Dropdown = styled.div`
   position: absolute;
   background-color: #000;
   padding: 10px;
-  width: 100px;
+  width: -moz-fit-content;
+  width: 120px;
   top: 32px;
   right: 0px;
   border-radius: 5px;

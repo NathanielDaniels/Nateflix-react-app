@@ -15,7 +15,7 @@ export const Spinner = styled.div`
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: #000;
   z-index: 999;
     
   :after {
