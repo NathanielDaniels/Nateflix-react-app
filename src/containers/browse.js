@@ -15,13 +15,6 @@ export function BrowseContainer() {
   const { user } = useAuthListener();
   // const { user } = firebase.auth().currentUser || {};
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false)
-  //   }, 3000)
-  //   return () => clearTimeout
-  // }, [user]) 
-
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
