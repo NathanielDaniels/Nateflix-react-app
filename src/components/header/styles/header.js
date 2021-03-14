@@ -84,6 +84,10 @@ export const Link = styled.p`
     font-weight: bold;
   }
 
+  &:first-of-type {
+    margin-left: 30px;
+  }
+
   &:last-of-type {
     margin-right: 0;
   }

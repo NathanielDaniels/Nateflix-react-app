@@ -27,7 +27,7 @@ Header.Frame = function HeaderFrame({children, ...restProps}) {
   return <Container {...restProps}>{children}</Container>;
 };
 
-Header.Feature = function HeaderFeature({ children, ...restProps }) {
+Header.Feature = function HeaderFeature({ children }) {
     return <Feature>{children}</Feature>
 }
 
@@ -54,6 +54,7 @@ Header.Logo = function HeaderLogo({to, ...restProps}) {
 Header.Text = function HeaderText({ children, ...restProps }) {
   return <Text {...restProps}>{children}</Text>;
 }
+
 Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps }) {
   const [searchActive, setSearchActive] = useState(false)
   return (
