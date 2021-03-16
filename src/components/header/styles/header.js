@@ -137,9 +137,14 @@ export const Text = styled.p`
 export const Search = styled.div`
   display: flex;
   align-items: center;
+
+  svg {
+    color: #fff;
+    cursor: pointer;
+  }
   
   @media (max-width: 700px) {
-      display: none;
+    display: none;
   }
 `;
 
@@ -157,7 +162,7 @@ export const SearchIcon = styled.button`
 export const SearchInput = styled.input`
   background-color: #44444459;
   color: white;
-  border: 1px solid white;
+  border: 1px solid #fff;
   transition: width 0.5s;
   height: 30px;
   font-size: 14px;
