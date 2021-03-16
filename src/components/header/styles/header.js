@@ -61,15 +61,15 @@ export const PlayButton = styled.button`
   padding: 10px 20px;
   border-radius: 5px;
   max-width: 130px;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 20px;
   margin-top: 10px;
   cursor: pointer;
-  transition: background-color: 0.5s ease;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
   
   &:hover {
-      background: #ff1e1e;
-      color: white;
+    background-color: #ff1e1e;
+    color: #fff;
   }
 `;
 
@@ -137,7 +137,6 @@ export const Text = styled.p`
 export const Search = styled.div`
   display: flex;
   align-items: center;
-
   svg {
     color: #fff;
     cursor: pointer;
@@ -152,6 +151,10 @@ export const SearchIcon = styled.button`
   cursor: pointer;
   background-color: transparent;
   border: 0;
+
+  &:focus {
+    border-bottom: 1px solid #fff;
+  }
   
   img {
     filter: brightness(0) invert(1);
