@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Header, Loading } from '../components'
+import { Header, Loading,Card } from '../components'
 import * as ROUTES from '../constants/routes'
 import { FirebaseContext } from '../context/firebase'
 import { SelectProfileContainer } from './profiles'
@@ -71,6 +71,11 @@ export function BrowseContainer() {
         </Header.Feature>
 
       </Header>
+
+      <Card>
+
+      </Card>
+
       <FooterContainer />
     </>)
     : (<SelectProfileContainer user={ user } setProfile={setProfile} />);
