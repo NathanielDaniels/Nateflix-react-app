@@ -6,18 +6,22 @@ import { SelectProfileContainer } from './profiles'
 import { FooterContainer } from './footer'
 import { useAuthListener } from '../hooks'
 
-export function BrowseContainer() {
-  const [category, setCategory] = useState('series');
+export function BrowseContainer({ slides }) {
+  const [category, setCategory] = useState('Series');
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
+  const [slideRows, setSlideRows] = useState([]);
+
   const { firebase } = useContext(FirebaseContext);
   const { user } = useAuthListener();
   // const { user } = firebase.auth().currentUser || {};
 
-  console.log("searchTerm", searchTerm)
-  console.log("category", category)
-  console.log("Profile", profile)
+  // console.log("searchTerm", searchTerm)
+  // console.log("category", category)
+  // console.log("Profile", profile)
+  console.log("slideRows", slideRows)
+  console.log("Slides:", slides)
 
 
   useEffect(() => {
@@ -26,6 +30,10 @@ export function BrowseContainer() {
     }, 3000)
     return () => clearTimeout
   }, [profile.displayName]) 
+  
+  useEffect(() => {
+   setSlideRows(slides[category])
+  }, [slides, category]) 
 
   return profile.displayName ? (
     <>
@@ -78,7 +86,10 @@ export function BrowseContainer() {
       </Header>
 
       <Card>
-        <h1>Card</h1>
+        <Card.Group>
+          <Card.Title>{category}</Card.Title>
+          <Card.SubTitle>Action</Card.SubTitle>
+        </Card.Group>
       </Card>
 
       <FooterContainer />

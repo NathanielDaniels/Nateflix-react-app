@@ -32,7 +32,7 @@ export const Name = styled.p`
 `;
 
 export const Picture = styled.img`
-  margin-top: 30px;
+  margin: 50px 0 5px;
   width: 100%;
   max-width: 150px;
   height: auto;

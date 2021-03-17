@@ -9,7 +9,7 @@ function App() {
   // * Get user from useAuthListener
   const { user } = useAuthListener();
 
-  console.log("app-user:", user)
+  // console.log("app-user:", user)
 
   return (
     <Router>

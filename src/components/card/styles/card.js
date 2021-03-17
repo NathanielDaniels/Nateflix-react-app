@@ -1,7 +1,9 @@
 import styled from 'styled-components/macro'
 
 export const Container = styled.div`
-
+  width: 100%;
+  display: flex;
+  background: #222;
 `;
 
 export const Group = styled.div`
@@ -9,7 +11,9 @@ export const Group = styled.div`
 `;
 
 export const Title = styled.h2`
-
+  margin: 50px;
+  color: #fff;
+  text-transform: capitalize;
 `;
 
 export const SubTitle = styled.h4`
