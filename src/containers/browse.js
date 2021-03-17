@@ -15,6 +15,11 @@ export function BrowseContainer() {
   const { user } = useAuthListener();
   // const { user } = firebase.auth().currentUser || {};
 
+  console.log("searchTerm", searchTerm)
+  console.log("category", category)
+  console.log("Profile", profile)
+
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)

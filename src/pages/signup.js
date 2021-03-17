@@ -14,6 +14,7 @@ export default function Signup() {
   const [emailAddress, setEmailAddress] = useState('');
   const [userPassword, setUserPassword] = useState('');
 
+  //* If logins are blank, Submit button is Disabled ( isInvalid = true )
   const isInvalid = firstName === '' || userPassword === '' || emailAddress === '';
 
   const handleSignup = event => {

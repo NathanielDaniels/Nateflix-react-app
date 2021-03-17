@@ -1,10 +1,10 @@
 import React from 'react';
 import {Route, Redirect} from 'react-router-dom'
 
-export function IsUserRedirect({ user, loggedInPath, children, ...rest}) {
+export function IsUserRedirect({ user, loggedInPath, children, ...restProps}) {
   return (
     <Route 
-      {...rest} 
+      {...restProps} 
       render={() => {
       if (!user) {
         return children;
@@ -25,9 +25,9 @@ export function IsUserRedirect({ user, loggedInPath, children, ...rest}) {
   )
 }
 
-export function ProtectedRoute({user, children, ...rest}) {
+export function ProtectedRoute({user, children, ...restProps}) {
   return (
-    <Route {...rest} render={({ location }) => {
+    <Route {...restProps} render={({ location }) => {
       if (user) {
         return children;
       }
