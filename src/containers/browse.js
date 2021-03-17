@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Header, Loading,Card } from '../components'
+import { Header, Loading, Card } from '../components'
 import * as ROUTES from '../constants/routes'
 import { FirebaseContext } from '../context/firebase'
 import { SelectProfileContainer } from './profiles'
@@ -73,7 +73,7 @@ export function BrowseContainer() {
       </Header>
 
       <Card>
-
+        <h1>Card</h1>
       </Card>
 
       <FooterContainer />

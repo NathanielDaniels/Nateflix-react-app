@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 export const Container = styled.section`
   display: flex;
@@ -28,11 +28,7 @@ export const Name = styled.p`
   color: #808080;
   text-overflow: ellipsis;
   font-size: 16px;
-  
-  &:hover {
-    font-weight: bold;
-    color: #e5e5e5;
-  }
+  transition: color .2s ease-in-out, font-weight .2s ease-in-out;
 `;
 
 export const Picture = styled.img`
@@ -43,6 +39,7 @@ export const Picture = styled.img`
   border: 3px solid black;
   cursor: pointer;
   border-radius: 10px;
+  transition: border .2s ease-in-out;
 `;
 
 export const Item = styled.li`
@@ -51,7 +48,7 @@ export const Item = styled.li`
   list-style-type: none;
   text-align: center;
   margin-right: 30px;
-  
+
   &:hover > ${Picture} {
       border: 2px solid white;
   }
