@@ -45,18 +45,38 @@ export const Content = styled.div`
 
 `;
 export const Meta = styled.div`
-
+  width: 100%;
+  cursor: default;
+  ${'' /* z-index: 1000; */}
+  ${'' /* background: #fff; */}
 `;
 export const Entities = styled.div`
-  background: #fff;
-  ${'' /* border: 2px solid red; */}
+  ${'' /* background: #fff; */}
   display: flex;
+
+  ${'' /* overflow-x: scroll; */}
+  ${'' /* overflow-y: hidden; */}
+  ${'' /* -ms-overflow-style: none;}
+  ${'' /* scrollbar-width: none; */}
+
+  
 `;
 export const Item = styled.div`
-  ${'' /* margin: 0 15px; */}
+  margin: 0 5px;
   border: 2px solid black;
+  z-index: 100;
+  transition: transform .3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+    z-index: 1000;
+  }
+  &:first-child {
+    margin-left: 15px;
+  }
 `;
+
 export const Image = styled.img`
   cursor: pointer;
-  height: 100%;
+  ${'' /* height: 100%; */}
+  width: fit-content;
 `;
