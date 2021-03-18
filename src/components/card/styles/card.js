@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 export const Container = styled.div`
   width: 100%;
   ${'' /* display: flex; */}
-  background: #222;
+  ${'' /* background: #222; */}
 `;
 
 export const Group = styled.div`
@@ -49,12 +49,14 @@ export const Meta = styled.div`
 `;
 export const Entities = styled.div`
   background: #fff;
-  border: 2px solid red;
-  
+  ${'' /* border: 2px solid red; */}
+  display: flex;
 `;
 export const Item = styled.div`
-
+  ${'' /* margin: 0 15px; */}
+  border: 2px solid black;
 `;
 export const Image = styled.img`
-
+  cursor: pointer;
+  height: 100%;
 `;
