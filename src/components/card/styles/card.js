@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 
 export const Container = styled.div`
   width: 100%;
-  display: flex;
+  ${'' /* display: flex; */}
   background: #222;
 `;
 
@@ -48,7 +48,9 @@ export const Meta = styled.div`
 
 `;
 export const Entities = styled.div`
-
+  background: #fff;
+  border: 2px solid red;
+  
 `;
 export const Item = styled.div`
 

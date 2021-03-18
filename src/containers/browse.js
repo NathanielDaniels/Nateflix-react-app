@@ -7,7 +7,7 @@ import { FooterContainer } from './footer'
 import { useAuthListener } from '../hooks'
 
 export function BrowseContainer({ slides }) {
-  const [category, setCategory] = useState('Series');
+  const [category, setCategory] = useState('series');
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,8 +20,8 @@ export function BrowseContainer({ slides }) {
   // console.log("searchTerm", searchTerm)
   // console.log("category", category)
   // console.log("Profile", profile)
-  console.log("slideRows", slideRows)
-  console.log("Slides:", slides)
+  console.log("Slides:", slides[category].map(item => item))
+  // console.log("slideRows", slideRows)
 
 
   useEffect(() => {
@@ -32,12 +32,12 @@ export function BrowseContainer({ slides }) {
   }, [profile.displayName]) 
   
   useEffect(() => {
-   setSlideRows(slides[category])
-  }, [slides, category]) 
+    setSlideRows(slides[category]);
+  }, [slides, category]);
 
   return profile.displayName ? (
     <>
-      { loading ? <Loading src={user.photoURL}/> : <Loading.ReleaseBody/>}
+      { loading ? <Loading src={user.photoURL}/> : <Loading.ReleaseBody/> }
       <Header src="joker1" dontShowOnSmallViewPort >
         <Header.Frame>
           <Header.Group>
@@ -85,14 +85,27 @@ export function BrowseContainer({ slides }) {
 
       </Header>
 
-      <Card>
+      {/* <Card> */}
         <Card.Group>
-          <Card.Title>{category}</Card.Title>
-          <Card.SubTitle>Action</Card.SubTitle>
+          {/* <Card.Title>{category}</Card.Title> */}
+          
+          {slideRows.map(slideItem => (
+            <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
+              <Card.Title>{slideItem.title}</Card.Title>
+              <Card.Entities>
+                {slideItem.data.map(item => (
+                  <Card.Item key={item.docId} item={item}>
+                    <Card.Image src={`../images/${category}/${slideItem.title}/${slideItem.data.map(item => item.slug)}/small.jpg`} alt="" />
+                  </Card.Item>
+                ))}
+              </Card.Entities>
+            </Card>
+          ))}
+
         </Card.Group>
-      </Card>
+      {/* </Card> */}
 
       <FooterContainer />
     </>)
-    : (<SelectProfileContainer user={ user } setProfile={setProfile} />);
+    : (<SelectProfileContainer user={ user } setProfile={ setProfile } />);
 }

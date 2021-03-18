@@ -34,8 +34,24 @@ Card.Feature = function CardFeature({ children, ...restProps }) {
   return <Feature { ...restProps }>{ children }</Feature>
 }
 
+Card.FeatureText = function CardFeatureText({ children, ...restProps }) {
+  return <FeatureText { ...restProps }>{ children }</FeatureText>
+}
+
+Card.FeatureClose = function CardFeatureClose({ children, ...restProps }) {
+  return <FeatureClose { ...restProps }>{ children }</FeatureClose>
+}
+
 Card.FeatureTitle = function CardFeatureTitle({ children, ...restProps }) {
   return <FeatureTitle { ...restProps }>{ children }</FeatureTitle>
+}
+
+Card.Maturity = function CardMaturity({ children, ...restProps }) {
+  return <Maturity { ...restProps }>{ children }</Maturity>
+}
+
+Card.Content = function CardContent({ children, ...restProps }) {
+  return <Content { ...restProps }>{ children }</Content>
 }
 
 Card.Entities = function CardEntities({ children, ...restProps }) {
@@ -60,6 +76,6 @@ Card.Item = function CardItem({ children, ...restProps }) {
     </Item>)
 }
 
-Card.Image = function CardImage({ children, ...restProps }) {
-  return <Image { ...restProps }>{ children }</Image>
+Card.Image = function CardImage({ ...restProps }) {
+  return <Image { ...restProps } />
 }
