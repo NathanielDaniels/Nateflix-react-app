@@ -164,13 +164,13 @@ export const FeatureTitle = styled(Title)`
 
 
 export const FeatureClose = styled.button`
-  color: white;
   position: absolute;
   right: 20px;
   top: 20px;
   cursor: pointer;
   background-color: transparent;
   border: 0;
+  filter: drop-shadow(0px 0px 0.75px #000);
 
   img {
     filter: brightness(0) invert(1);
