@@ -11,6 +11,7 @@ export const Group = styled.div`
   flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
   ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
   ${({ margin }) => margin && `margin: ${margin}`};
+  
 
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
@@ -23,16 +24,18 @@ export const Title = styled.h2`
   margin: 50px;
   color: #fff;
   text-transform: capitalize;
+  letter-spacing: 1px;
 `;
 
 export const SubTitle = styled.h4`
-  font-size: 12px;
+  font-size: 14px;
   color: #fff;
   font-weight: bold;
-  margin-top: 0;
+  margin-top: 5px;
   margin-bottom: 0;
   user-select: none;
   display: none;
+  letter-spacing: 1px;
 `;
 
 export const Text = styled.p`
@@ -43,6 +46,7 @@ export const Text = styled.p`
   user-select: none;
   display: none;
   line-height: normal;
+  letter-spacing: .8px;
 `;
 
 export const Entities = styled.div`
@@ -92,11 +96,14 @@ export const Item = styled.div`
   margin-right: 5px;
   position: relative;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+  z-index: 100;
 
   &:hover {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
     transform: scale(1.3);
-    z-index: 99;
+    z-index: 1000;
   }
 
   @media (min-width: 1200px) {
