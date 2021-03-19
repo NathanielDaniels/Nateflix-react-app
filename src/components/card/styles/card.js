@@ -92,7 +92,7 @@ export const Item = styled.div`
   margin-right: 5px;
   position: relative;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.3);
@@ -137,8 +137,7 @@ export const FeatureText = styled.p`
 export const Feature = styled.div`
   display: flex;
   flex-direction: row;
-  ${'' /* background: url(${({ src }) => src}); */}
-  background: red;
+  background: url(${({ src }) => src});
   background-size: contain;
   position: relative;
   height: 360px;
