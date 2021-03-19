@@ -2,8 +2,6 @@ import styled from 'styled-components/macro'
 
 export const Container = styled.div`
   width: 100%;
-  ${'' /* display: flex; */}
-  ${'' /* background: #222; */}
 `;
 
 export const Group = styled.div`
@@ -50,7 +48,6 @@ export const Text = styled.p`
 `;
 
 export const Entities = styled.div`
-  ${'' /* background: #fff; */}
   display: flex;
 
   ${'' /* overflow-x: scroll; */}
@@ -62,14 +59,15 @@ export const Entities = styled.div`
 export const Meta = styled.div`
   width: 100%;
   cursor: default;
-  ${'' /* z-index: 1000; */}
-  ${'' /* background: #fff; */}
+  ${'' /* background: rgba(0,0,0,.6); */}
+  ${'' /* padding: 5px; */}
+  ${'' /* border-radius: 4px; */}
 `;
 
 export const Image = styled.img`
   width: fit-content;
   ${'' /* width: 100%; */}
-  border: 0;
+  ${'' /* border: 0; */}
   max-width: 305px;
   cursor: pointer;
   ${'' /* height: auto; */}
@@ -78,32 +76,25 @@ export const Image = styled.img`
 `;
 
 export const Item = styled.div`
-  ${'' /* margin: 0 5px;
-  border: 2px solid black;
-  z-index: 100;
-  transition: transform .3s ease-in-out;
-  &:hover {
-    transform: scale(1.05);
-    z-index: 1000;
-  }
-  &:first-child {
-    margin-left: 15px;
-  } */}
-
-
   display: flex;
   flex-direction: column;
   margin-right: 5px;
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+  ${'' /* transition: all 0.3s ease-in-out; */}
   z-index: 100;
 
   &:hover {
-    border-left: 2px solid #000;
-    border-right: 2px solid #000;
     transform: scale(1.3);
     z-index: 1000;
+  }
+
+  &:hover ${Image} {
+    ${'' /* border-left: 2px solid #000;
+    border-right: 2px solid #000; */}
+    border: 2px solid #000;
+    
   }
 
   @media (min-width: 1200px) {
@@ -152,7 +143,7 @@ export const Feature = styled.div`
   background-repeat: no-repeat;
   background-color: black;
 
-  ${'' /* @media (max-width: 1000px) {
+  @media (max-width: 1000px) {
     height: auto;
     background-size: auto;
 
@@ -164,7 +155,7 @@ export const Feature = styled.div`
     ${FeatureText} {
       font-size: 14px;
     }
-  } */}
+  }
 `;
 
 export const FeatureTitle = styled(Title)`
