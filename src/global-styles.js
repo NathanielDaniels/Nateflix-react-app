@@ -16,7 +16,10 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #000;
     color: #333;
     font-size: 16px;
-    ${'' /* overflow-x: hidden; */}
+  }
+
+  html {
+    overflow-x: hidden;
   }
 
   a {

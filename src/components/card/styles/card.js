@@ -1,7 +1,25 @@
 import styled from 'styled-components/macro'
 
+export const Title = styled.h2`
+  margin: 50px;
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+`;
+
 export const Container = styled.div`
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  > ${Title} {
+    @media (max-width: 1000px) {
+      margin-left: 30px;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 `;
 
 export const Group = styled.div`
@@ -18,12 +36,7 @@ export const Group = styled.div`
   }
 `;
 
-export const Title = styled.h2`
-  margin: 50px;
-  color: #fff;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-`;
+
 
 export const SubTitle = styled.h4`
   font-size: 14px;
@@ -33,7 +46,7 @@ export const SubTitle = styled.h4`
   margin-bottom: 0;
   user-select: none;
   display: none;
-  letter-spacing: 1px;
+  letter-spacing: .2px;
 `;
 
 export const Text = styled.p`
@@ -44,12 +57,13 @@ export const Text = styled.p`
   user-select: none;
   display: none;
   line-height: normal;
-  letter-spacing: .8px;
+  letter-spacing: .5px;
 `;
 
 export const Entities = styled.div`
   display: flex;
-
+  flex-direction: row;
+  
   ${'' /* overflow-x: scroll; */}
   ${'' /* overflow-y: hidden; */}
   ${'' /* -ms-overflow-style: none;}
@@ -58,21 +72,19 @@ export const Entities = styled.div`
 
 export const Meta = styled.div`
   width: 100%;
-  cursor: default;
-  ${'' /* background: rgba(0,0,0,.6); */}
-  ${'' /* padding: 5px; */}
-  ${'' /* border-radius: 4px; */}
+  display: none;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  background-color: rgba(0,0,0,.7);
 `;
 
 export const Image = styled.img`
   width: fit-content;
-  ${'' /* width: 100%; */}
-  ${'' /* border: 0; */}
   max-width: 305px;
   cursor: pointer;
+  ${'' /* border: 0; */}
   ${'' /* height: auto; */}
-  ${'' /* padding: 0; */}
-  ${'' /* margin: 0; */}
 `;
 
 export const Item = styled.div`
@@ -91,10 +103,7 @@ export const Item = styled.div`
   }
 
   &:hover ${Image} {
-    ${'' /* border-left: 2px solid #000;
-    border-right: 2px solid #000; */}
-    border: 2px solid #000;
-    
+    border: 1px solid #000;
   }
 
   @media (min-width: 1200px) {

@@ -35,9 +35,7 @@ Card.Entities = function CardEntities({ children, ...restProps }) {
 }
 
 Card.Meta = function CardMeta({ children, ...restProps }) {
-  const { showFeature } = useContext(FeatureContext);
-  return !showFeature ? <Meta { ...restProps }>{ children }</Meta> : null;
-  // return <Meta { ...restProps }>{ children }</Meta>
+  return <Meta { ...restProps }>{ children }</Meta>
 }
 
 Card.Item = function CardItem({ item, children, ...restProps }) {
