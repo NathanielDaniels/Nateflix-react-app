@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  ${'' /* width: 50%; */}
+`;
 
 export const Button = styled.button`
   background-color: #e50914;

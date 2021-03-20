@@ -28,7 +28,7 @@ export const Group = styled.div`
   flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
   ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
   ${({ margin }) => margin && `margin: ${margin}`};
-  
+  ${'' /* width: 50%; */}
 
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
@@ -152,7 +152,8 @@ export const Feature = styled.div`
   background-position-x: right;
   background-repeat: no-repeat;
   background-color: black;
-
+  margin-bottom: 50px;
+  
   @media (max-width: 1000px) {
     height: auto;
     background-size: auto;

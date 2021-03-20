@@ -6,7 +6,7 @@ export default function Player({children, ...restProps}) {
 }
 
 Player.Button = function PlayerButton({...restProps}) {
-  return <Button {...restProps} onClick={() => console.log("new CLick")} >Play</Button>
+  return <Button {...restProps} onClick={() => console.log("new CLick")}> Play </Button>
 }
 
 Player.Video = function PlayerVideo({...restProps}) {
