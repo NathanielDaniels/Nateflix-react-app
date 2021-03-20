@@ -19,7 +19,7 @@ export const Button = styled.button`
   padding-left: 0;
   border-radius: 6px;
   transition: transform .2s ease-in-out;
-  
+
   &:hover {
     transform: scale(1.05);
     background-color: #ff0a16;
@@ -27,5 +27,5 @@ export const Button = styled.button`
 `;
 
 export const Video = styled.video`
-
+  display: none;
 `;

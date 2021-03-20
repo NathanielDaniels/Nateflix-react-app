@@ -29,7 +29,7 @@ export function BrowseContainer({ slides }) {
   }, [slides, category]);
 
   return profile.displayName ? (
-    <container className="browseContainer">
+    <>
       { loading ? <Loading src={user.photoURL}/> : <Loading.ReleaseBody/> }
       <Header src="joker1" dontShowOnSmallViewPort >
         <Header.Frame>
@@ -101,7 +101,7 @@ export function BrowseContainer({ slides }) {
 
               <Card.Feature category={category}>
                 <Player>
-                  <Player.Button/>
+                  <Player.Button />
                   <Player.Video src="/videos/bunny.mp4"/>
                 </Player>
               </Card.Feature>
@@ -111,6 +111,6 @@ export function BrowseContainer({ slides }) {
         </Card.Group>
 
       <FooterContainer />
-    </container>)
+    </>)
     : (<SelectProfileContainer user={ user } setProfile={ setProfile } />);
 }
