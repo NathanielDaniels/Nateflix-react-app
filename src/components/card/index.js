@@ -7,14 +7,14 @@ export default function Card({children, ...restProps}) {
   const [showFeature, setShowFeature] = useState(false);
   const [itemFeature, setItemFeature] = useState({});
   const [isClicked, setIsClicked] = useState(false)
-  const ref = useRef(null)
+  // const widthRef = useRef(null)
 
   // useEffect(() => {
   //   console.log("top scroll width", ref.current.scrollWidth)
   // }, [ref])
 
   return (
-    <FeatureContext.Provider value={{ showFeature, setShowFeature, itemFeature, setItemFeature, ref, isClicked, setIsClicked }}>
+    <FeatureContext.Provider value={{ showFeature, setShowFeature, itemFeature, setItemFeature, isClicked, setIsClicked }}>
        <Container { ...restProps }>{ children }</Container>
     </FeatureContext.Provider>
   )
@@ -22,7 +22,7 @@ export default function Card({children, ...restProps}) {
 
 Card.Pagination = function CardPagination({src, children, ...restProps}) {
 
-    return (
+  return (
     <Pagination {...restProps}>
       {children}
     </Pagination>
@@ -30,9 +30,10 @@ Card.Pagination = function CardPagination({src, children, ...restProps}) {
 }
 
 Card.Arrow = function CardArrow({...restProps}) {
-  const {isClicked, setIsClicked} = useContext(FeatureContext)
-  // console.log(isClicked);
-  return <Arrow onClick={() => setIsClicked(true)} {...restProps}/>
+  // const {isClicked, setIsClicked} = useContext(FeatureContext)
+
+  // return <Arrow onClick={() => setIsClicked(true)} {...restProps}/>
+  return <Arrow {...restProps}/>
 }
 
 Card.Group = function CardGroup({ children, ...restProps }) {
@@ -56,25 +57,16 @@ Card.Text = function CardText({ children, ...restProps }) {
 }
 
 Card.Entities = function CardEntities({children, ...restProps }) {
-  const {ref, isClicked, setIsClicked} = useContext(FeatureContext)
+  // const {widthRef, isClicked, setIsClicked} = useContext(FeatureContext)
+  // const {widthRef} = useContext(FeatureContext)
 
-  useEffect(() => {
-    console.log(ref)
-    // console.log('entities ref', `${ref.current['clientWidth']}0px`)
-    // console.log('entities ref', ref.current['scrollWidth'].toString().split(''))
-    console.log(ref.current['scrollWidth'])
-    // console.log(ref.current['scrollWidth'].toString().split(''))
-    // const firstArr = [...ref.current['scrollWidth'].toString().split('')]
-    // console.log("arr", firstArr)
-
-    // console.log(firstArr.split(1,2).unshift("1","6"))
-    // const lastTwoArr = ref.current['scrollWidth'].toString().split('').splice(1,2)
-    // console.log("lastTwoArr", lastTwoArr)
-    
-    // ref.current['clientWidth'] < 1345 ? console.log('under', ref.current['clientWidth']) : console.log('over')
-  }, [ref])
+  // useEffect(() => {
+  //   console.log("widthRef", widthRef)
+  //   console.log("widthRef scrollWidth",widthRef.current['scrollWidth'])
+  // }, [widthRef])
   
-  return <Entities ref={ref} { ...restProps }>{ children }</Entities>
+  return (
+    <Entities { ...restProps }>{ children }</Entities>)
 }
 
 Card.Meta = function CardMeta({ children, ...restProps }) {
@@ -106,7 +98,7 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
   const { showFeature, itemFeature, setShowFeature} = useContext(FeatureContext);
 
   return showFeature ? (
-    <Feature className="feature-section" { ...restProps } src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}>
+    <Feature className="feature-section" src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`} {...restProps}>
       <Content>
         <FeatureTitle>{itemFeature.title}</FeatureTitle>
         <FeatureText>{itemFeature.description}</FeatureText>
