@@ -11,6 +11,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   ${'' /* margin-bottom: 50px; */}
+  
   > ${Title} {
     @media (max-width: 1000px) {
       margin-left: 30px;
@@ -28,7 +29,7 @@ export const Group = styled.div`
   flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
   ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
   ${({ margin }) => margin && `margin: ${margin}`};
-  ${'' /* width: 50%; */}
+  
 
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
@@ -61,14 +62,57 @@ export const Text = styled.p`
   letter-spacing: .5px;
 `;
 
+export const Pagination = styled.div`
+  ${'' /* position: relative; */}
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+`;
+
+export const Wrapper = styled.div`
+  width: 100%;
+  position: relative;
+
+  &:hover ${Pagination} {
+   display: block;
+  }
+`;
+
+export const Arrow = styled.img`
+  ${'' /* border: 2px solid red; */}
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0,-50%);
+  height: 25px;
+  width: 25px;
+  filter: invert(1) brightness(1);
+  z-index: 1001;
+
+  &:hover, &.left-arrow:hover {
+    filter: invert(1) drop-shadow(0 2px 1px #000);
+    transform: translate(0,-50%) scale(1.3);  
+  }
+
+  &.left-arrow {
+    transform: translate(0,-50%) rotate(180deg);
+    left: 10px;
+
+    &:hover {
+      transform: translate(0,-50%) scale(1.3) rotate(180deg);
+      filter: invert(1) drop-shadow(0 -2px 1px #000);
+    }
+  }
+`;
+
 export const Entities = styled.div`
+  ${'' /* margin-left: 56px; */}
   display: flex;
   flex-direction: row;
-  
-  ${'' /* overflow-x: scroll; */}
-  ${'' /* overflow-y: hidden; */}
-  ${'' /* -ms-overflow-style: none;}
-  ${'' /* scrollbar-width: none; */}
+  position: relative;
+  width: fit-content;
+  ${'' /* right: 300px; */}
+  ${'' /* width:100vw; */}
 `;
 
 export const Meta = styled.div`
@@ -82,10 +126,8 @@ export const Meta = styled.div`
 
 export const Image = styled.img`
   width: fit-content;
-  max-width: 305px;
+  max-width: 300px;
   cursor: pointer;
-  ${'' /* border: 0; */}
-  ${'' /* height: auto; */}
 `;
 
 export const Item = styled.div`
@@ -95,8 +137,14 @@ export const Item = styled.div`
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
-  ${'' /* transition: all 0.3s ease-in-out; */}
   z-index: 100;
+  ${'' /* transition: all 0.3s ease-in-out; */}
+  &:hover ${Pagination} {
+    display: block;
+  }
+   &:first-of-type {
+    margin-left: 56px;
+  }
 
   &:hover {
     transform: scale(1.3);
@@ -131,6 +179,8 @@ export const Item = styled.div`
   }
 `;
 
+//* Feature =========================================
+
 export const FeatureText = styled.p`
   font-size: 18px;
   color: #fff;
@@ -153,7 +203,7 @@ export const Feature = styled.div`
   background-repeat: no-repeat;
   background-color: black;
   margin-bottom: 50px;
-  
+
   @media (max-width: 1000px) {
     height: auto;
     background-size: auto;

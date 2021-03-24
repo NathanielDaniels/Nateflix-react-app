@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import { Header, Loading, Card, Player } from '../components'
 import * as ROUTES from '../constants/routes'
 import { FirebaseContext } from '../context/firebase'
@@ -12,6 +12,8 @@ export function BrowseContainer({ slides }) {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [slideRows, setSlideRows] = useState([]);
+  const [clientWidth, setClientWidth] = useState('')
+  const ref = useRef(null)
 
   const { firebase } = useContext(FirebaseContext);
   const { user } = useAuthListener();
@@ -23,10 +25,17 @@ export function BrowseContainer({ slides }) {
     }, 3000)
     return () => clearTimeout
   }, [profile.displayName]) 
+
   
   useEffect(() => {
     setSlideRows(slides[category]);
   }, [slides, category]);
+  
+  useEffect(() => {
+   setClientWidth(document.body.clientWidth)
+   console.log('width', ref.current)
+   console.log("clientWidth", clientWidth)
+  }, [clientWidth]) 
 
   return profile.displayName ? (
     <>
@@ -87,17 +96,31 @@ export function BrowseContainer({ slides }) {
 
               <Card.Title>{slideItem.title}</Card.Title>
 
-              <Card.Entities>
-                {slideItem.data.map(item => (
-                  <Card.Item key={item.docId} item={item}>
-                    <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} alt={`${item.title} - (${item.genre})`} />
-                    <Card.Meta>
-                      <Card.SubTitle>{item.title}</Card.SubTitle>
-                      <Card.Text>{item.description}</Card.Text>
-                    </Card.Meta>
-                  </Card.Item>
-                ))}
-              </Card.Entities>
+              <Card.Wrapper>
+
+                {/* <Card.Pagination className="left-arrow" src='/images/icons/chevron-right.png'/> */}
+                <Card.Pagination>
+                  {/* {console.log("document width", document.body.clientWidth)} */}
+                  <Card.Arrow onClick={() => console.log("scrollLeft()")} className="left-arrow" src='/images/icons/chevron-right.png'/>
+                </Card.Pagination>
+
+                <Card.Entities>
+                  {slideItem.data.map(item => (
+                    <Card.Item key={item.docId} item={item}>
+                      <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} alt={`${item.title}!`} />
+                      <Card.Meta>
+                        <Card.SubTitle>{item.title}</Card.SubTitle>
+                        <Card.Text>{item.description}</Card.Text>
+                      </Card.Meta>
+                    </Card.Item>
+                  ))}
+                </Card.Entities>
+
+                <Card.Pagination>
+                  <Card.Arrow src='/images/icons/chevron-right.png'/>
+                </Card.Pagination>
+                {/* <Card.Pagination src='/images/icons/chevron-right.png'/> */}
+              </Card.Wrapper>
 
               <Card.Feature category={category}>
                 <Player>

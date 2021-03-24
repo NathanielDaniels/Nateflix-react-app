@@ -1,7 +1,68 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 export const Container = styled.div`
-  ${'' /* width: 50%; */}
+
+`;
+
+export const Overlay = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  margin: 0 20px;
+  z-index: 1000;
+`;
+
+export const Inner = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+
+  video {
+    height: 100%;
+    width: 100%;
+  }
+`;
+
+export const Close = styled.button`
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 22px;
+  height: 22px;
+  opacity: 0.5;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  filter: invert(1) brightness(1);
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    content: ' ';
+    height: 22px;
+    width: 2px;
+    background-color: #333;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
 `;
 
 export const Button = styled.button`
@@ -26,8 +87,4 @@ export const Button = styled.button`
     transform: scale(1.05);
     background-color: #ff0a16;
   }
-`;
-
-export const Video = styled.video`
-  display: none;
 `;
