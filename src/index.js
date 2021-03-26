@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { GlobalStyles } from './global-styles'
 import './index.css';
-import App from './App';
+import App from './app';
 import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';

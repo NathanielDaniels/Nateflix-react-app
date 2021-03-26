@@ -33,15 +33,24 @@ export function BrowseContainer({ slides }) {
 
   useEffect(() => {
     const fuse = new Fuse(slideRows, {
-      keys: ['data.description','data.title','data.genre'],
+      isCaseSensitive: false,
+      keys: ['data.title','data.genre'],
     })
+
     const results = fuse.search(searchTerm).map(({item}) => item)
+    
+
+    console.log("search results", results)
+    console.log("searchTerm", searchTerm)
 
     if (slideRows.length > 0 && searchTerm.length > 3  && results.length > 0) {
       setSlideRows(results)
     } else {
       setSlideRows(slides[category]);
     }
+
+    // console.log(results.map(item => item.data.map(movie => movie.title === searchTerm ? movie.title : "No movie with Title")))
+
     return () => {}
   }, [searchTerm])
 
