@@ -17,7 +17,6 @@ export function BrowseContainer({ slides }) {
 
   const { firebase } = useContext(FirebaseContext);
   const { user } = useAuthListener();
-  // const { user } = firebase.auth().currentUser || {};
 
   useEffect(() => {
     setTimeout(() => {
@@ -38,10 +37,6 @@ export function BrowseContainer({ slides }) {
     })
 
     const results = fuse.search(searchTerm).map(({item}) => item)
-    
-
-    console.log("search results", results)
-    console.log("searchTerm", searchTerm)
 
     if (slideRows.length > 0 && searchTerm.length > 3  && results.length > 0) {
       setSlideRows(results)
