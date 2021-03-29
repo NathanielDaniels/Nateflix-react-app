@@ -1,7 +1,8 @@
 import styled from 'styled-components/macro'
 
 export const Title = styled.h2`
-  margin: 50px;
+  ${'' /* margin: 50px; */}
+  margin: 0 0 30px;
   color: #fff;
   text-transform: capitalize;
   letter-spacing: 1px;
