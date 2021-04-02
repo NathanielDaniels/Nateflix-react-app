@@ -92,3 +92,17 @@ export const Submit = styled.button`
       opacity: 0.5;
   }
 `;
+
+export const Demo = styled.button`
+  position: relative;
+  background: #e50914;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  ${'' /* margin-top: 12px; */}
+  bottom: -80px;
+  padding: 16px;
+  border: 0;
+  color: white;
+  cursor: pointer;
+`;

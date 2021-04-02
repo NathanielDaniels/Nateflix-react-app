@@ -1,8 +1,8 @@
 import styled from 'styled-components/macro'
 
 export const Title = styled.h2`
-  ${'' /* margin: 50px; */}
-  margin: 0 0 30px;
+  margin: 50px;
+  ${'' /* margin: 0 0 30px; */}
   color: #fff;
   text-transform: capitalize;
   letter-spacing: 1px;
@@ -107,7 +107,7 @@ export const Arrow = styled.img`
 `;
 
 export const Entities = styled.div`
-  ${'' /* margin-left: 56px; */}
+  margin-left: 56px;
   display: flex;
   flex-direction: row;
   position: relative;
