@@ -5,6 +5,7 @@ import { Form } from '../components';
 import { HeaderContainer } from '../containers/header';
 import { FooterContainer } from '../containers/footer';
 import * as ROUTES from '../constants/routes'
+import { Link } from 'react-router-dom';
 
 export default function Signin() {
   const history = useHistory();
@@ -28,6 +29,12 @@ export default function Signin() {
           history.push(ROUTES.BROWSE);
       })
       .catch((error) => setError(error.message));
+  }
+
+  const handleDemo = (event) => {
+    console.log("demo clicked")
+    // event.preventDefault();
+    // history.push(ROUTES.BROWSE);
   }
   
   return (
@@ -57,7 +64,13 @@ export default function Signin() {
               New to Netflix? <Form.Link to="/signup">Sign up now.</Form.Link>
             </Form.Text>
 
-            <Form.Demo className="DemoBtn">Demo</Form.Demo>
+            <Form.Demo 
+              onClick={() => handleDemo()}
+              type="button"
+              
+            >
+              <Link to='/Browse'>Demo</Link>
+            </Form.Demo>
 
             <Form.TextSmall>
               This page is protected by Google reCAPTCHA.
@@ -65,6 +78,14 @@ export default function Signin() {
 
           </Form.Base>
         </Form>
+
+        {/* <Form.Demo onClick={() => {
+          console.log('demo Clicked')
+          return handleDemo
+        }}>
+          Demo
+        </Form.Demo> */}
+
       </HeaderContainer>
       <FooterContainer />
     </>

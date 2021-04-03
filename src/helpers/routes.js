@@ -25,10 +25,10 @@ export function IsUserRedirect({ user, loggedInPath, children, ...restProps}) {
   )
 }
 
-export function ProtectedRoute({user, children, ...restProps}) {
+export function ProtectedRoute({demo, user, children, ...restProps}) {
   return (
     <Route {...restProps} render={({ location }) => {
-      if (user) {
+      if (user || demo) {
         return children;
       }
 

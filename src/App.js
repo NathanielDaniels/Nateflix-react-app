@@ -9,6 +9,8 @@ function App() {
   // * Get user from useAuthListener
   const { user } = useAuthListener();
 
+  console.log(Signin())
+
   // console.log("app-user:", user)
 
   return (
@@ -31,6 +33,7 @@ function App() {
             <ProtectedRoute
               user={user}
               path={ROUTES.BROWSE}
+
               >
               <Browse/>
             </ProtectedRoute>
