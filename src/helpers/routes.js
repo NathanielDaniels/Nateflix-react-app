@@ -1,16 +1,16 @@
 import React from 'react';
 import {Route, Redirect} from 'react-router-dom'
 
-export function IsUserRedirect({ user, loggedInPath, children, ...restProps}) {
+export function IsUserRedirect({ user, loggedInPath, children, ...restProps }) {
   return (
     <Route 
-      {...restProps} 
+      { ...restProps } 
       render={() => {
-      if (!user) {
+      if ( !user ) {
         return children;
       }
 
-      if (user) {
+      if ( user ) {
         return (
           <Redirect 
             to={{
@@ -19,20 +19,19 @@ export function IsUserRedirect({ user, loggedInPath, children, ...restProps}) {
           />
         )
       }
-
       return null;
     }}/>
   )
 }
 
-export function ProtectedRoute({demo, user, children, ...restProps}) {
+export function ProtectedRoute({ demo, user, children, ...restProps }) {
   return (
-    <Route {...restProps} render={({ location }) => {
-      if (user || demo) {
+    <Route { ...restProps } render={({ location }) => {
+      if ( user || demo ) {
         return children;
       }
 
-       if (!user) {
+       if ( !user ) {
         return (
           <Redirect 
             to={{

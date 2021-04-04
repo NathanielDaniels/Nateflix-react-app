@@ -7,9 +7,9 @@ import { useAuthListener } from './hooks'
 
 function App() {
   // * Get user from useAuthListener
-  const { user } = useAuthListener();
+  const { user, demo } = useAuthListener();
 
-  console.log(Signin())
+  // console.log(Signin())
 
   // console.log("app-user:", user)
 
@@ -32,6 +32,7 @@ function App() {
             </IsUserRedirect>
             <ProtectedRoute
               user={user}
+              demo={demo}
               path={ROUTES.BROWSE}
 
               >

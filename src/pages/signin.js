@@ -5,7 +5,7 @@ import { Form } from '../components';
 import { HeaderContainer } from '../containers/header';
 import { FooterContainer } from '../containers/footer';
 import * as ROUTES from '../constants/routes'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function Signin() {
   const history = useHistory();
@@ -13,6 +13,9 @@ export default function Signin() {
   const [emailAddress, setEmailAddress] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [error, setError] = useState('');
+  const [demo, setDemo] = useState(false)
+
+  console.log("Demo Start",demo)
 
   const isInvalid = userPassword === '' || emailAddress === '';
 
@@ -31,10 +34,17 @@ export default function Signin() {
       .catch((error) => setError(error.message));
   }
 
-  const handleDemo = (event) => {
+  const handleDemo = () => {
     console.log("demo clicked")
-    // event.preventDefault();
+    setDemo(demo => !demo)
+    console.log("demo after click", demo)
+    // if (demo) {
+    setEmailAddress("demo@demo.com")
+    setUserPassword("demo")
     // history.push(ROUTES.BROWSE);
+    
+    console.log(emailAddress, userPassword)
+    // }
   }
   
   return (
@@ -66,10 +76,13 @@ export default function Signin() {
 
             <Form.Demo 
               onClick={() => handleDemo()}
+              // onChange={() => {
+              //   setEmailAddress("demo@demo.com")
+              //   setUserPassword("demo")
+              // }}
               type="button"
-              
             >
-              <Link to='/Browse'>Demo</Link>
+              Demo
             </Form.Demo>
 
             <Form.TextSmall>

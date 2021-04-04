@@ -4,5 +4,3 @@ export default function firebaseKey() {
     projectId: "netflix-clone-639dd"
   }
 }
-
-// uJ4fG3EdXllRo1PCvXnVDbqNFuj6FRGbAntJHBQk
