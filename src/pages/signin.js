@@ -13,9 +13,9 @@ export default function Signin() {
   const [emailAddress, setEmailAddress] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [error, setError] = useState('');
-  const [demo, setDemo] = useState(false)
+  // const [demo, setDemo] = useState(false)
 
-  console.log("Demo Start",demo)
+  // console.log("Demo Start",demo)
 
   const isInvalid = userPassword === '' || emailAddress === '';
 
@@ -35,16 +35,9 @@ export default function Signin() {
   }
 
   const handleDemo = () => {
-    console.log("demo clicked")
-    setDemo(demo => !demo)
-    console.log("demo after click", demo)
-    // if (demo) {
     setEmailAddress("demo@demo.com")
-    setUserPassword("demo")
-    // history.push(ROUTES.BROWSE);
-    
-    console.log(emailAddress, userPassword)
-    // }
+    setUserPassword("nateflixdemo")
+    history.push(ROUTES.BROWSE);
   }
   
   return (
@@ -76,10 +69,6 @@ export default function Signin() {
 
             <Form.Demo 
               onClick={() => handleDemo()}
-              // onChange={() => {
-              //   setEmailAddress("demo@demo.com")
-              //   setUserPassword("demo")
-              // }}
               type="button"
             >
               Demo
@@ -91,13 +80,6 @@ export default function Signin() {
 
           </Form.Base>
         </Form>
-
-        {/* <Form.Demo onClick={() => {
-          console.log('demo Clicked')
-          return handleDemo
-        }}>
-          Demo
-        </Form.Demo> */}
 
       </HeaderContainer>
       <FooterContainer />
