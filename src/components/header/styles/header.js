@@ -175,7 +175,7 @@ export const SearchInput = styled.input`
   width: ${({ active }) => (active ? '200px' : '0px')};
 `;
 
-export const Picture = styled.button`
+export const Picture = styled.button` 
   background: url(${({src}) => src});
   background-size: contain;
   background-repeat: no-repeat;

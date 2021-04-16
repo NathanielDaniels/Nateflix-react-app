@@ -37,7 +37,7 @@ export default function Signin() {
   const handleDemo = () => {
     setEmailAddress("demo@demo.com")
     setUserPassword("nateflixdemo")
-    history.push(ROUTES.BROWSE);
+    // history.push(ROUTES.BROWSE);
   }
   
   return (
