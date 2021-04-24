@@ -20,8 +20,8 @@ export default function Home() {
             your membership.</OptForm.Text>
           </OptForm>
         </Featured>
+        
       </HeaderContainer>
-      
       <JumbotronContainer />
       <FaqsContainer />
       <FooterContainer />
