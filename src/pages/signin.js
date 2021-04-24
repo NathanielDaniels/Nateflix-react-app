@@ -69,7 +69,7 @@ export default function Signin() {
 
             <Form.Demo 
               onClick={() => handleDemo()}
-              type="button"
+              // type="button"
             >
               Demo
             </Form.Demo>
