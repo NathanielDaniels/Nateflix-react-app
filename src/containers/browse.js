@@ -62,7 +62,7 @@ export function BrowseContainer({ slides }) {
               Series
             </Header.Link>
             <Header.Link 
-              active={ category === 'films' ? 'true' : 'false' }
+              active={ category === 'films' ? 'true' : 'false' } 
               onClick={ () => setCategory('films') }>
               Films
             </Header.Link>

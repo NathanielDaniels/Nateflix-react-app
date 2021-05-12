@@ -164,7 +164,7 @@ export const SearchIcon = styled.button`
 
 export const SearchInput = styled.input`
   background-color: #44444459;
-  color: white;
+  color: #fff;
   border: 1px solid #fff;
   transition: width 0.5s;
   height: 30px;

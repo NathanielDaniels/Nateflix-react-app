@@ -139,7 +139,6 @@ export const Item = styled.div`
   cursor: pointer;
   transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
   z-index: 100;
-  ${'' /* transition: all 0.3s ease-in-out; */}
   &:hover ${Pagination} {
     display: block;
   }
